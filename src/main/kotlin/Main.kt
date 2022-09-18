@@ -1,41 +1,46 @@
 import java.util.*    // required import
+import kotlin.collections.ArrayList
 
-val decorations = listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
 
-fun main() {
-    val eager = decorations.filter { it[0] == 'p' }
-    println("eager: $eager")
+fun main(args : Array<String>) {
 
+    val numberOfFish : Int = 51
+
+    when (numberOfFish) {
+        0 -> println("Pusto")
+        7 -> println("lucky")
+    }
+//    var kali : Byte = null
+    var mara : Int? = null
+
+
+    val myClassmates = mutableListOf("Aiba", "Mara", "Adai", "Max")
+    myClassmates.remove("Max")
+    myClassmates.add("Akula")
+
+
+
+    val numbers = intArrayOf(1,2,3)
+    val numbers2 = intArrayOf(4,5,6)
+    val foo2 = numbers+numbers2
+
+
+    print(foo2[5])
+
+    for (el in myClassmates) {
+        print(el + " ")
+    }
+
+
+    val decorations = listOf ("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
+    println(decorations.filter { it[0] == 'p' })
+
+    // lazy, will wait until asked to evaluate
     val filtered = decorations.asSequence().filter { it[0] == 'p' }
     println("filtered: $filtered")
 
-    val newList = filtered.toList()
-    println("new list: $newList")
 
-    val lazyMap = decorations.asSequence().map {
-        println("access: $it")
-        it
-    }
 
-    println("lazy: $lazyMap")
-    println("-----")
-    println("first: ${lazyMap.first()}")
-    println("-----")
-    println("all: ${lazyMap.toList()}")
-
-    val lazyMap2 = decorations.asSequence().filter {it[0] == 'p'}.map {
-        println("access: $it")
-        it
-    }
-    println("-----")
-    println("filtered: ${lazyMap2.toList()}")
-
-    val mysports = listOf("basketball", "fishing", "running")
-    val myplayers = listOf("LeBron James", "Ernest Hemingway", "Usain Bolt")
-    val mycities = listOf("Los Angeles", "Chicago", "Jamaica")
-    val mylist = listOf(mysports, myplayers, mycities)     // list of lists
-    println("-----")
-    println("Flat: ${mylist.flatten()}")
 
 }
 
