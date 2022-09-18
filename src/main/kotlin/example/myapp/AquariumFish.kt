@@ -8,8 +8,7 @@ interface FishAction {
     fun eat()
 }
 
-class Plecostomus: FishAction, FishColor {
-    override val color = "gold"
+class Plecostomus(fishColor: FishColor = GoldColor): FishAction, FishColor by fishColor {
     override fun eat() {
         println("eat algae")
     }
