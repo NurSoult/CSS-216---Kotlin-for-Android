@@ -22,4 +22,8 @@ class Shark: FishAction, FishColor {
     }
 }
 
+object GoldColor : FishColor {
+    override val color = "gold"
+}
+
 
