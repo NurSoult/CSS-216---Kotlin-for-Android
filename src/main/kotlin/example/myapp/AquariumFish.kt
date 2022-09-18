@@ -19,12 +19,12 @@ class Shark: FishAction, FishColor {
     }
 }
 
-object GoldColor : FishColor {
-    override val color = "gold"
-}
-
 class PrintingFishAction(val food: String) : FishAction {
     override fun eat() {
         println(food)
     }
+}
+
+object GoldColor : FishColor {
+    override val color = "gold"
 }
