@@ -3,13 +3,11 @@ package example.myapp.decor
 
 fun main() {
 
-    const val rock = 3
-    val value1 = complexFunctionCall()
-    const val CONSTANT1 = complexFunctionCall()
-
 }
+ fun String.hasSpaces(): Boolean {
+     val found = this.indexOf(' ')
+     return found != -1
+ }
 
-object Constants {
-    const val CONSTANT2 = "object constant"
-}
-val foo = Constants.CONSTANT2
+//fun String.hasSpaces() = indexOf(" ") != -1
+
