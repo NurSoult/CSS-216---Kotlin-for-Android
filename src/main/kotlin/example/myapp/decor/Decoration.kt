@@ -2,8 +2,12 @@ package example.myapp.decor
 
 
 fun main() {
-    val list2 = listOf("a", "bbb", "cc")
-    for (s in list2.listIterator()) {
-        print("$s ")
-    }
+    val scientific = hashMapOf("guppy" to "poecilia reticulata", "catfish" to "corydoras", "zebra fish" to "danio rerio")
+    println(scientific.get("guppy"))
+    println(scientific.get("zebra fish"))
+
+    println(scientific.get("swordtail"))
+    println(scientific.getOrDefault("swordtail", "sorry, I don't know"))
+    println(scientific.getOrElse("swordtail") {"sorry, idk"})
+
 }
