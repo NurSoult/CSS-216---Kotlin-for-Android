@@ -2,6 +2,6 @@ package example.myapp.decor
 
 
 fun main() {
-    val list = listOf(1, 5, 3, 4)
-    println(list.sum())
+    val list2 = listOf("a", "bbb", "cc")
+    println(list2.sum())
 }
