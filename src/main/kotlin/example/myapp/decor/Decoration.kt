@@ -2,12 +2,14 @@ package example.myapp.decor
 
 
 fun main() {
-    val scientific = hashMapOf("guppy" to "poecilia reticulata", "catfish" to "corydoras", "zebra fish" to "danio rerio")
-    println(scientific.get("guppy"))
-    println(scientific.get("zebra fish"))
 
-    println(scientific.get("swordtail"))
-    println(scientific.getOrDefault("swordtail", "sorry, I don't know"))
-    println(scientific.getOrElse("swordtail") {"sorry, idk"})
+    const val rock = 3
+    val value1 = complexFunctionCall()
+    const val CONSTANT1 = complexFunctionCall()
 
 }
+
+object Constants {
+    const val CONSTANT2 = "object constant"
+}
+val foo = Constants.CONSTANT2
