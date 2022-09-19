@@ -3,5 +3,7 @@ package example.myapp.decor
 
 fun main() {
     val list2 = listOf("a", "bbb", "cc")
-    println(list2.sumBy { it.length })
+    for (s in list2.listIterator()) {
+        print("$s ")
+    }
 }
