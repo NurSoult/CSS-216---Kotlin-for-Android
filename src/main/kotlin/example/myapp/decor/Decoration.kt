@@ -1,5 +1,11 @@
 package example.myapp.decor
 
 
-val AquariumPlant.isGreen: Boolean
-    get() = color == "green"
+fun AquariumPlant?.pull() {
+    this?.apply {
+        println("removing $this")
+    }
+}
+
+val plant: AquariumPlant? = null
+plant.pull()color == "green"
