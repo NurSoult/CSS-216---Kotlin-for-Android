@@ -2,7 +2,7 @@ package example.myapp.decor
 
 
 fun main() {
-    val numbers = Triple(6, 9, 42)
-    println(numbers.toString())
-    println(numbers.toList())
+    val equipment = "fish net" to "catching fish"
+    val (tool, use) = equipment
+    println("$tool is used for $use")
 }
